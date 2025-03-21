@@ -82,7 +82,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginLeft:20,
     fontWeight:'bold',
-    marginTop:30,
     paddingLeft:45,
    
 
@@ -105,8 +104,8 @@ const styles = StyleSheet.create({
   subheader:{
     display:'flex',
     marginRight:50,
-    marginTop:30,
     flexDirection:'row',
+    marginTop:30,
     justifyContent:'space-between'
 
   }
