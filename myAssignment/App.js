@@ -1,7 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, FlatList } from 'react-native';
 import Icon from './assets/person.png'
 import filterIcon  from './assets/filterIcon.png'
+
+import AntDesign from '@expo/vector-icons/AntDesign';
+
+const flatData = [
+{
+   id: 1,
+   title: 'Exercise',
+   subTitle: '12 Tasks',
+   image: require ('../assets/'young woman working online.png')
+},
+{
+id: 2,
+title: 'Study',
+subTitle: '12 Tasks',
+image: require ('../assets/'young woman working desk.png')
+}
+];
+
 
 export default function App() {
   return (
@@ -15,22 +33,31 @@ export default function App() {
         <View style={styles.profileIcon}>
           <Image source={Icon}/>
         </View>
+        
       </View>
 
       
         <View  style={styles.subheader}>
         <TextInput 
         placeholder='Search'
-        style={styles.TextInput}/>
+        style={styles.TextInput}
+        placeholderTextColor="black"/>
 
         <View style={styles.filter}>
         <Image source={filterIcon}/>
         </View>
-
+        <AntDesign name="search1" size={24} color="black"  style={styles.searchIcon}/>
         </View>
 
-       
-       
+     
+        <Text style={styles.Category}>Categories</Text>
+      
+        <View>
+          <FlatList
+          data={flatData}
+          keyExtractor={(item) => (item.id)}
+          />
+        </View>
      
       
       <StatusBar style="auto" />
@@ -76,10 +103,10 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
   TextInput:{
-    width: 280,
-    height: 48,
+    width: 270,
+    height: 45,
     backgroundColor:'white',
-    borderRadius: 10,
+    borderRadius: 13,
     marginLeft:20,
     fontWeight:'bold',
     paddingLeft:45,
@@ -108,6 +135,20 @@ const styles = StyleSheet.create({
     marginTop:30,
     justifyContent:'space-between'
 
+  },
+  searchIcon:{
+    position: 'absolute',
+    left:30,
+    top:14
+  
+  },
+  Category:{
+    Width:96,
+    Height:24,
+    marginTop:30,
+    marginLeft:20,
+    fontWeight:'bold'
+    
   }
   
    
