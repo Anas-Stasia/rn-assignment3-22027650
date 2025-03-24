@@ -1,24 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, FlatList, Pressable } from 'react-native';
 import Icon from './assets/person.png'
 import filterIcon  from './assets/filterIcon.png'
 
 import AntDesign from '@expo/vector-icons/AntDesign';
 
+import woman from './assets/woman.png';
+import man from './assets/man.png';
+
 const flatData = [
-{
-   id: 1,
-   title: 'Exercise',
-   subTitle: '12 Tasks',
-   image: require ('../assets/'young woman working online.png')
-},
-{
-id: 2,
-title: 'Study',
-subTitle: '12 Tasks',
-image: require ('../assets/'young woman working desk.png')
-}
+  {
+    id: 1,
+    title: 'Exercise',
+    subTitle: '12 Tasks',
+    image: woman,
+  },
+  {
+    id: 2,
+    title: 'Study',
+    subTitle: '12 Tasks',
+    image: man,
+  }
 ];
+
 
 
 export default function App() {
@@ -52,10 +56,19 @@ export default function App() {
      
         <Text style={styles.Category}>Categories</Text>
       
-        <View>
+        <View style={styles.Working}>
           <FlatList
           data={flatData}
+          renderItem={(item) => (
+           < Pressable style={styles.Duties}>
+             <Text style={styles.title}>{item.title}</Text>
+             <Text style={styles.subTitle} >{item.subTitle}</Text>
+             <Image source={item.image} style={styles.image}/>
+           </Pressable>
+          )}
           keyExtractor={(item) => (item.id)}
+          horizontal
+          showsHorizontalScrollIndicator={false}
           />
         </View>
      
@@ -149,6 +162,30 @@ const styles = StyleSheet.create({
     marginLeft:20,
     fontWeight:'bold'
     
+  },
+  Duties:{
+    width: 186,
+    height:192,
+    backgroundColor:'white',
+    borderRadius:15,
+    marginInlineEnd:24
+  },
+  Working:{
+    marginTop:12,
+    
+  },
+  title:{
+    fontSize: 15,
+    fontWeight:'bold',
+    marginTop: 16,
+    marginLeft: 14
+  },
+  subTitle:{
+    marginLeft:14,
+    fontSize:12
+  },
+  image:{
+    marginLeft:21
   }
   
    
