@@ -59,7 +59,7 @@ export default function App() {
         <View style={styles.Working}>
           <FlatList
           data={flatData}
-          renderItem={(item) => (
+          renderItem={({item}) => (
            < Pressable style={styles.Duties}>
              <Text style={styles.title}>{item.title}</Text>
              <Text style={styles.subTitle} >{item.subTitle}</Text>
