@@ -1,25 +1,78 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, FlatList, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, FlatList, Pressable,ScrollView } from 'react-native';
 import Icon from './assets/person.png'
 import filterIcon  from './assets/filterIcon.png'
 
 import AntDesign from '@expo/vector-icons/AntDesign';
-
-import woman from './assets/woman.png';
 import man from './assets/man.png';
+import woman from './assets/woman.png';
+
+
 
 const flatData = [
   {
+  
     id: 1,
     title: 'Exercise',
     subTitle: '12 Tasks',
-    image: woman,
+    image:man,
   },
   {
     id: 2,
     title: 'Study',
     subTitle: '12 Tasks',
-    image: man,
+    image:woman,
+  }
+];
+
+
+const flatInfo = [
+  {
+    id: 1,
+    title: 'Code',
+    subTitle: '12 Tasks',
+    image:man,
+  },
+  {
+    id: 2,
+    title: 'Eat',
+    subTitle: '12 Tasks',
+    image:woman,
+  }
+];
+
+
+const flatSuggest = [
+  {
+    id: 1,
+    title: 'Dance',
+    subTitle: '12 Tasks',
+    image:man,
+  },
+  {
+    id: 2,
+    title: 'Sing',
+    subTitle: '12 Tasks',
+    image:woman,
+  }
+];
+
+
+
+const flatIdeas = [
+  {
+    id: 1,
+    title: 'Jump',
+    subTitle: '12 Tasks',
+    image:man,
+  },
+  {
+    id: 2,
+    title: 'Walking',
+    subTitle: '12 Tasks',
+    image:woman,
+
+    
   }
 ];
 
@@ -71,12 +124,72 @@ export default function App() {
           showsHorizontalScrollIndicator={false}
           />
         </View>
+
+
+
+
+
+
+        <View style={styles.Working}>
+          <FlatList
+          data={flatInfo}
+          renderItem={({item}) => (
+           < Pressable style={styles.Duties}>
+             <Text style={styles.title}>{item.title}</Text>
+             <Text style={styles.subTitle} >{item.subTitle}</Text>
+             <Image source={item.image} style={styles.image}/>
+           </Pressable>
+          )}
+          keyExtractor={(item) => (item.id)}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          />
+        </View>
+
+
+
+        <View style={styles.Working}>
+          <FlatList
+          data={flatIdeas}
+          renderItem={({item}) => (
+           < Pressable style={styles.Duties}>
+             <Text style={styles.title}>{item.title}</Text>
+             <Text style={styles.subTitle} >{item.subTitle}</Text>
+             <Image source={item.image} style={styles.image}/>
+           </Pressable>
+          )}
+          keyExtractor={(item) => (item.id)}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          />
+        </View>
+
+
+
+
+        <View style={styles.Working}>
+          <FlatList
+          data={flatSuggest}
+          renderItem={({item}) => (
+           < Pressable style={styles.Duties}>
+             <Text style={styles.title}>{item.title}</Text>
+             <Text style={styles.subTitle} >{item.subTitle}</Text>
+             <Image source={item.image} style={styles.image}/>
+           </Pressable>
+          )}
+          keyExtractor={(item) => (item.id)}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          />
+        </View>
      
       
       <StatusBar style="auto" />
     </View>
   );
 }
+
+<Text>Ongoing Task</Text>
 
 const styles = StyleSheet.create({
   container: {
@@ -160,7 +273,8 @@ const styles = StyleSheet.create({
     Height:24,
     marginTop:30,
     marginLeft:20,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    fontSize:25
     
   },
   Duties:{
@@ -168,10 +282,12 @@ const styles = StyleSheet.create({
     height:192,
     backgroundColor:'white',
     borderRadius:15,
-    marginInlineEnd:24
+    marginInlineEnd:24,
+   
   },
   Working:{
     marginTop:12,
+    marginLeft:20
     
   },
   title:{
@@ -189,7 +305,4 @@ const styles = StyleSheet.create({
   }
   
    
-  
-  
-
 });
