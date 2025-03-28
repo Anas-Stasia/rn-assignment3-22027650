@@ -80,7 +80,7 @@ const flatIdeas = [
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
 
       <View style={styles.texthead}>
         <View>
@@ -185,7 +185,7 @@ export default function App() {
      
       
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
