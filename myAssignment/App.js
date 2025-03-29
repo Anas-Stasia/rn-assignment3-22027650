@@ -183,13 +183,16 @@ export default function App() {
           />
         </View>
      
+     <Text>Ongoing Tasks</Text>
       
       <StatusBar style="auto" />
     </ScrollView>
+
+    
   );
+
 }
 
-<Text>Ongoing Task</Text>
 
 const styles = StyleSheet.create({
   container: {
