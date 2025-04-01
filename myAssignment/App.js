@@ -78,6 +78,11 @@ const flatIdeas = [
 
 
 
+
+
+
+
+
 export default function App() {
   return (
     <ScrollView style={styles.container}>
@@ -89,6 +94,8 @@ export default function App() {
         </View>
         <View style={styles.profileIcon}>
           <Image source={Icon}/>
+
+         
         </View>
         
       </View>
@@ -183,7 +190,9 @@ export default function App() {
           />
         </View>
      
-     <Text>Ongoing Tasks</Text>
+     <Text style={styles.Task}>Ongoing Task</Text>
+
+   
       
       <StatusBar style="auto" />
     </ScrollView>
@@ -305,7 +314,16 @@ const styles = StyleSheet.create({
   },
   image:{
     marginLeft:21
+  },
+  Task:{
+    width:120,
+    height:24,
+    fontWeight:'bold',
+    fontSize:20,
+    marginLeft:20,
+    marginTop:30
   }
-  
+
+
    
-});
+  });
