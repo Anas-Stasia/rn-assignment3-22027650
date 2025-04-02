@@ -192,7 +192,19 @@ export default function App() {
      
      <Text style={styles.Task}>Ongoing Task</Text>
 
-   
+     <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Mobile App Development</Text>
+        </View>
+
+        <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Web Development</Text>
+        </View>
+
+        <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Push Ups</Text>
+        </View>
+
+
       
       <StatusBar style="auto" />
     </ScrollView>
@@ -316,14 +328,31 @@ const styles = StyleSheet.create({
     marginLeft:21
   },
   Task:{
-    width:120,
-    height:24,
     fontWeight:'bold',
     fontSize:20,
     marginLeft:20,
-    marginTop:30
+    marginTop:30,
+    marginBottom:12
+  },
+  taskCard: {
+    backgroundColor: '#FFF',
+    borderRadius: 15,
+    padding: 20,
+    marginBottom: 10,
+    height: 128, 
+    justifyContent: 'center',
+    marginLeft:20,
+    marginRight:20,
+    borderColor:'#E8D1BA'
+  },
+  taskTitle: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: '#000',
   }
 
 
    
   });
+
+  
