@@ -343,6 +343,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginLeft:20,
     marginRight:20,
+    borderWidth:1,
     borderColor:'#E8D1BA'
   },
   taskTitle: {
@@ -351,8 +352,6 @@ const styles = StyleSheet.create({
     color: '#000',
   }
 
-
-   
   });
 
   
