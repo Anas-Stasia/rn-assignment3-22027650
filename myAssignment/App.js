@@ -199,11 +199,58 @@ export default function App() {
         <View style={styles.taskCard}>
           <Text style={styles.taskTitle}>Web Development</Text>
         </View>
-
+    
+    
         <View style={styles.taskCard}>
           <Text style={styles.taskTitle}>Push Ups</Text>
         </View>
 
+        <View style={styles.taskCard} >
+          <Text style={styles.taskTitle}>Coding</Text>
+        </View>
+
+        <View  style={styles.taskCard}>
+           <Text  style={styles.taskTitle}>Web Design</Text>
+        </View>
+
+        <View  style={styles.taskCard}>
+           <Text  style={styles.taskTitle}>Typing</Text>
+        </View>
+
+        <View  style={styles.taskCard}>
+            <Text style={styles.taskTitle}>Programing</Text>
+        </View>
+
+        <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Software Engineering</Text>
+        </View>
+
+        <View style={styles.taskCard}>
+        <Text style={styles.taskTitle}>Data Structures and Algorithms</Text>
+        </View>
+
+        <View  style={styles.taskCard}>
+        <Text style={styles.taskTitle}>Scripting</Text>
+        </View>
+
+       <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Relaxing</Text>
+        </View>
+
+        <View  style={styles.taskCard}>
+          <Text  style={styles.taskTitle}>App Design</Text>
+        </View>
+        <View style={styles.taskCard}>
+          <Text  style={styles.taskTitle}>Designing fylers</Text>
+        </View>
+        <View style={styles.taskCard}>
+          <Text style={styles.taskTitle}>Graphic design</Text>
+        </View>
+      <View style={styles.taskCard}>
+      <Text style={styles.taskTitle}>Debugging</Text>
+      </View>
+       
+       
 
       
       <StatusBar style="auto" />
